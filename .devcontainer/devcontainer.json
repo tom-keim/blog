@@ -1,0 +1,34 @@
+{
+  "name": "Blog",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+
+  "portsAttributes": {
+    "4321": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+
+  "workspaceFolder": "/workspaces/blog",
+
+  "forwardPorts": [4321],
+
+  "postCreateCommand": "pnpm install && cd /workspaces/blog && pnpm run build",
+
+  "waitFor": "postCreateCommand",
+
+  "postAttachCommand": {
+    "Server": "pnpm run dev"
+  },
+
+  "customizations": {
+    //"codespaces": {
+    //  "openFiles": ["src/pages/index.astro"]
+    //},
+    "vscode": {
+      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+    }
+  }
+}
