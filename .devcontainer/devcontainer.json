@@ -7,20 +7,21 @@
   "portsAttributes": {
     "4321": {
       "label": "Application",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "openBrowser"
     }
   },
-
+  "workspaceMount": "source=blog-devcontainer-volume,target=/workspaces/blog,type=volume",
   "workspaceFolder": "/workspaces/blog",
 
   "forwardPorts": [4321],
 
   "postCreateCommand": "pnpm install && cd /workspaces/blog && pnpm run build",
 
+
   "waitFor": "postCreateCommand",
 
   "postAttachCommand": {
-    "Server": "pnpm run dev"
+    "Server": "pnpm run dev --host"
   },
 
   "customizations": {
