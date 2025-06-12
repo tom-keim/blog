@@ -21,7 +21,7 @@
   "waitFor": "postCreateCommand",
 
   "postAttachCommand": {
-    "Server": "pnpm run dev --host"
+    "Server": "pnpm run dev --host --force"
   },
 
   "customizations": {

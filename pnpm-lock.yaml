@@ -30,6 +30,9 @@ importers:
       '@iconify-json/entypo-social':
         specifier: ^1.2.2
         version: 1.2.2
+      '@iconify-json/material-symbols':
+        specifier: ^1.2.26
+        version: 1.2.26
 
 packages:
 
@@ -243,6 +246,9 @@ packages:
 
   '@iconify-json/entypo-social@1.2.2':
     resolution: {integrity: sha512-70dql8kxhMh2JE7pnrBC83IPt9bRxsfOVVvPuEdgi7DbB62Im+VoAWVARSf3K7lIFNYL6VDlYUXuqIB/QdtR8A==}
+
+  '@iconify-json/material-symbols@1.2.26':
+    resolution: {integrity: sha512-U41Yck5mP7Fb38Gm0upT26D26meCR3sJRENE0NQ11RvheTV9+x9zJYcMmBy8m9zmQ+3vzYHvtISAI59MZmh6GA==}
 
   '@iconify/tools@4.1.2':
     resolution: {integrity: sha512-q6NzLQYEN9zkDfcyBqD3vItHcZw97w/s++3H3TBxUORr57EfHxj6tOW6fyufDjMq+Vl56WXWaPx1csBPYlI5CA==}
@@ -2289,6 +2295,10 @@ snapshots:
     optional: true
 
   '@iconify-json/entypo-social@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols@1.2.26':
     dependencies:
       '@iconify/types': 2.0.0
 
