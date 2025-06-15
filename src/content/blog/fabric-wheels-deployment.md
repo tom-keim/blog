@@ -14,10 +14,10 @@ In this post, I’ll walk you through how we implemented this automation using G
 
 In this post, we’ll walk through the key steps to implement an automated Python wheel deployment to a Microsoft Fabric environment:
 
-- Register an application (Service Principal) in the Azure Portal
-- Grant the Service Principal admin access to your Fabric workspace
-- Create a Python script that uses the Fabric API to upload the `.whl` file
-- Set up a GitHub Action or Azure DevOps pipeline to automate the deployment
+- [Register an application (Service Principal) in the Azure Portal](#register-an-application-service-principal-in-the-azure-portal)
+- [Grant the Service Principal admin access to your Fabric workspace](#grant-the-service-principal-access-to-your-fabric-workspace)
+- [Create a Python script that uses the Fabric API to upload the `.whl` file](#create-a-python-script-to-upload-the-whl-file-using-the-fabric-api)
+- [Set up a GitHub Action or Azure DevOps pipeline to automate the deployment](#-github-action-integration)
 
 > ℹ️ **Note:** All code in this blogpost can be found in my [Github Repository](https://github.com/tom-keim/fabric-whl-upload/)
 ## Register an Application (Service Principal) in the Azure Portal
@@ -51,12 +51,7 @@ To do this:
 
 Next, we’ll create a Python script that authenticates using the Service Principal and uploads the built `.whl` file to the Microsoft Fabric environment.
 
-This script will perform the following tasks:
-
-1. Import the required modules  
-2. Authenticate with Azure AD using the Service Principal  
-3. Retrieve an access token for the Fabric API  
-and more
+In the following steps, I’ll walk you through each function required to complete the process. At the end, we’ll tie everything together into a single, runnable script.
 
 ---
 
@@ -348,7 +343,6 @@ Create the following **repository secrets**:
 
 Next up, create an GitHub Action, and use the following code. This code will use Python's build module to build a new wheels file based on the python in the same repository. 
 
-```yaml
 ### 🛠️ Create the GitHub Action Workflow
 
 Next, create a GitHub Action workflow that automates the build and deployment of your Python wheel file to Microsoft Fabric.
