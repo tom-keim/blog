@@ -9,4 +9,7 @@ import icon from "astro-icon";
 export default defineConfig({
 	site: 'https://tomkeim.nl',
 	integrations: [mdx(), sitemap(), icon()],
+	  redirects: {
+		"/blog/fabric-wheels-deployment": "/fabric-wheels-deployment/"
+	}
 });
