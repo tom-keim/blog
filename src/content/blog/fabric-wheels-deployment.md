@@ -63,6 +63,7 @@ We start by importing the necessary Python modules. If any of these are not alre
 pip install requests
 pip install azure-identity
 ```
+> ℹ️ **Note:** To keep this post simple, we won’t use a package manager in this demo. However, I recommend using one to help manage your dependencies more effectively. Popular options include [pip](https://pypi.org/), [poetry](https://python-poetry.org/) or [uv](https://github.com/astral-sh/uv).
 
 Now import the modules:
 
