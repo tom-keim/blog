@@ -96,6 +96,7 @@ For example, ask yourself:
 - Is the activity doing more than it needs to?
 - Can you reduce the amount of data it processes?
 - Does it really need to run as often as it does?
+- Can the activity be further optimized.
 
 ### Configure Your Spark Compute
 
