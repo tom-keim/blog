@@ -88,6 +88,15 @@ Use this option carefully, especially in production environments.
 
 Once you’ve recovered, it’s time to ensure it doesn’t happen again. Start by analyzing what caused the overage, then consider the following preventative measures:
 
+### Optimize the Activity That Caused the Overload
+
+Before scaling up or changing configurations, take a closer look at the activity that caused the capacity overload. Sometimes, small improvements can make a big difference.
+
+For example, ask yourself:
+- Is the activity doing more than it needs to?
+- Can you reduce the amount of data it processes?
+- Does it really need to run as often as it does?
+
 ### Configure Your Spark Compute
 
 The number of Spark vCores you can use is tied to your SKU. By default, you’re entitled to **2x CU in vCores** — for example, an **F64** gives you **128 vCores**.
