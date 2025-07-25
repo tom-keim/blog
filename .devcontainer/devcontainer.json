@@ -10,7 +10,6 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "workspaceMount": "source=blog-devcontainer-volume,target=/workspaces/blog,type=volume",
   "workspaceFolder": "/workspaces/blog",
 
   "forwardPorts": [4321],
