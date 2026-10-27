@@ -17,7 +17,7 @@
 
   "forwardPorts": [4321],
 
-  "postCreateCommand": "pnpm install && cd /workspaces/blog && pnpm run build",
+  "postCreateCommand": "sudo chown \"$(id -u):$(id -g)\" /workspaces/blog && sudo chown -R \"$(id -u):$(id -g)\" /workspaces/blog/node_modules && pnpm install && pnpm run build",
 
   
   "waitFor": "postCreateCommand",
