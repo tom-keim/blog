@@ -3,6 +3,9 @@
   "build": {
     "dockerfile": "./Dockerfile"
   },
+  "mounts": [
+    "source=blog-node-modules,target=/workspaces/blog/node_modules,type=volume"
+  ],
 
   "portsAttributes": {
     "4321": {
@@ -16,7 +19,7 @@
 
   "postCreateCommand": "pnpm install && cd /workspaces/blog && pnpm run build",
 
-
+  
   "waitFor": "postCreateCommand",
 
   "postAttachCommand": {
